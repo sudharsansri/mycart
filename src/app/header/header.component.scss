@@ -1,0 +1,51 @@
+/* Custom Navbar Styles */
+
+
+.navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #333;
+  }
+  
+  .nav-link:hover {
+    color: #555;
+  }
+  
+  .active {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 20px;
+  }
+  
+  .btn-outline-success {
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .form-inline {
+      display: block;
+      text-align: center;
+    }
+  
+    .form-inline .form-control {
+      margin: 10px auto;
+    }
+  }
+  
