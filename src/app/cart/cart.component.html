@@ -1,15 +1,16 @@
-
 <app-header></app-header>
-<h1 style="letter-spacing: 1px;margin: 20px;font-size: 25px;">products</h1>
-   
+<div class="container">
+  <h1 style="letter-spacing: 1px;margin: 20px;font-size: 25px;">products</h1>
 
-<div class="card">
-  <div *ngFor="let product of products">
-    <img [src]="product.image" class="card-img-top" style="height: 95px;width: 95px;" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ product.title }}</h5>
-      <p class="card-text">Price: ${{ product.price }}</p>
-      <a href="#" class="btn btn-primary">Remove</a>
+  <div class="d-flex justify-space-between flex-wrap " >
+    <div class="card mb-3" style="width: 30%;margin-right: 45px;" *ngFor="let product of products">
+      <img [src]="product.image" class="card-img-top mx-auto d-block" style="height: 95px;width: 95px;" alt="...">
+
+        <div class="card-body text-center">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">Price: ${{ product.price }}</p>
+        <a href="#" class="btn btn-primary">Remove</a>
+      </div>
     </div>
   </div>
 </div>

@@ -13,13 +13,14 @@ export class CartComponent implements OnInit {
     ngOnInit() {
       const new1:any=localStorage.getItem("newlist")
       if(new1!==null){
-        this.products.push(JSON.parse(new1))
+        this.products=(JSON.parse(new1))
       }
     
       console.log(new1,'jdh')
       console.log(this.products,'jdjj')
-    //  this.addData()
+      this.addData()
     }
+   
     addData(){
       console.log(this.products,'1')
       console.log('Component initialized');

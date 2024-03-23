@@ -8,6 +8,7 @@ import { ProductService } from '../service/productservice.service';
 })
 export class ProductComponent {
   products: any[]=[];
+  cartItem: any[]=[]
 
   constructor(private productService: ProductService) {}
 
@@ -25,8 +26,10 @@ export class ProductComponent {
     if(product){
       this.productService.addData(product)
     }
-
-    localStorage.setItem('newlist',JSON.stringify(product))
+    this.cartItem.push(product)
+    localStorage.setItem('newlist',JSON.stringify(this.cartItem))
+    
+    
     
   }
 
